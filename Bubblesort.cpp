@@ -8,11 +8,10 @@ void inputData(){
 
     while (true)
     {
-        cout << " Masukkan jumlah data: ";
+        cout << "Masukkan jumlah data: ";
         cin >> n;
 
-        if (n < 15)
-        {
+        if (n< 15){
             break;
         }
         else
@@ -28,24 +27,18 @@ void inputData(){
 
     for (int i = 0; i < n; i++)
     {
-        cout << "Memasukkan data ke- " << i + 1 << " =";
-        cin >> arr[1];
+        cout << "Masukkan data ke-" << i + 1 << " =";
+        cin >> arr[i]; 
     }
 }
-int main()
-{
 
-}
-    
-void bubbleSrot()
-{
-
-    int pass = 1; // step 1
+void bubbleSort() {
+    int pass = 1; //step 1
     do
     {
         for (int j = 0; j <= n - 1 - pass; j++) //step 2
-        {
-
+    
+    {
             if (arr[j] > arr[j+1])
             {
                 int temp;
@@ -53,13 +46,13 @@ void bubbleSrot()
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
             }
-        }
-
-        pass = pass + 1; //step 4  
-    } while (pass <= n - 1);
+    } 
+    
+        pass = pass + 1; //step 4
+    } while (pass <= n - 1); 
 }
  
-void displayData()
+ void displayData()
  {
     cout << endl;
     cout << "============" << endl;
@@ -79,5 +72,3 @@ void displayData()
     displayData();
     return 0;
  }
-
-
